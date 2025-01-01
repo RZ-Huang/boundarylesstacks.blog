@@ -19,9 +19,9 @@ permissions:
 
 # set env vars in Github settings here
 env:
-  SITE_URL: 'https://nemanjam.github.io'
-  PLAUSIBLE_SCRIPT_URL: 'https://plausible.arm1.nemanjamitic.com/js/script.js'
-  PLAUSIBLE_DOMAIN: 'nemanjamitic.com'
+  SITE_URL: 'https://boundarylesstacks.blog.github.io'
+  PLAUSIBLE_SCRIPT_URL: 'https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js'
+  PLAUSIBLE_DOMAIN: 'boundarylesstacks.blog.github.io'
 
 jobs:
   build-manual:
@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build nemanjam.github.io
+      - name: Build boundarylesstacks.blog.github.io
         run: yarn build
 
       - name: Upload artifact

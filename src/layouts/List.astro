@@ -10,15 +10,10 @@ export interface Props extends BaseProps {
 }
 
 const { paginationProps, metadata } = Astro.props;
-const { title, description } = metadata;
 ---
 
 <Centered {metadata}>
   <article class="flex flex-col">
-    <slot name="heading">
-      <h1 class="b-h1">{title}</h1>
-      {description && <p class="b-p mb-5">{description}</p>}
-    </slot>
     <section class="flex-grow flex flex-col">
       <slot />
       <div class="mt-auto">

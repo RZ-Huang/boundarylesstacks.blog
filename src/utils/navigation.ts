@@ -9,8 +9,8 @@ export const getActiveNavItemPath = (routePathname: string): NavigationItem['pat
   // don't highlight home route
 
   switch (true) {
-    case routePathname === ROUTES.BLOG:
-      activeNavItem = getNavItem(ROUTES.BLOG);
+    case routePathname === ROUTES.POST:
+      activeNavItem = getNavItem(ROUTES.POST);
       break;
     case routePathname === ROUTES.ABOUT:
       activeNavItem = getNavItem(ROUTES.ABOUT);
@@ -36,8 +36,8 @@ export const getActiveNavItemPath = (routePathname: string): NavigationItem['pat
     case !routePathname.startsWith(ROUTES.TAGS) &&
       !routePathname.startsWith(ROUTES.CATEGORIES) &&
       !routePathname.startsWith(ROUTES.EXPLORE) &&
-      routePathname.startsWith(ROUTES.BLOG):
-      activeNavItem = getNavItem(ROUTES.BLOG);
+      routePathname.startsWith(ROUTES.POST):
+      activeNavItem = getNavItem(ROUTES.POST);
       break;
 
     default:

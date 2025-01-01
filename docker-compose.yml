@@ -5,16 +5,16 @@ version: '3.8'
 services:
   nmc-docker:
     container_name: nmc-docker
-    # image: nemanjamitic/nemanjam.github.io:latest
+    # image: boundarylesstacks/boundarylesstacks.blog.github.io:latest
     build:
       context: .
       dockerfile: ./docker/Dockerfile
       args:
         ARG_SITE_URL_AMD64: 'http://localhost:8080'
         # make separate script with localhost enabled
-        ARG_PLAUSIBLE_SCRIPT_URL: 'https://plausible.arm1.nemanjamitic.com/js/script.js'
+        ARG_PLAUSIBLE_SCRIPT_URL: 'https://plausible.arm1./boundarylesstacks.blog.github.io/js/script.js'
         # will trigger analytics
-        ARG_PLAUSIBLE_DOMAIN: 'nemanjamitic.com'
+        ARG_PLAUSIBLE_DOMAIN: 'boundarylesstacks.blog.github.io'
 
     # platform: linux/arm64
     platform: linux/amd64

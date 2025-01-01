@@ -4,11 +4,14 @@ import { Icon } from 'astro-icon/components';
 import Link from '@/components/Link.astro';
 import { ROUTES } from '@/constants/routes';
 import { CONFIG_CLIENT } from '@/config/client';
+import { CONFIG_SERVER } from '@/config/server';
 import { getLatestCommitInfo } from '@/libs/git';
 import { shortDate } from '@/utils/datetime';
 import { limitString, trimHttpProtocol } from '@/utils/strings';
 
-const { SITE_URL, AUTHOR_LINKEDIN, AUTHOR_GITHUB, REPO_URL } = CONFIG_CLIENT;
+const isProd = CONFIG_SERVER.NODE_ENV === 'production';
+
+const { SITE_URL, REPO_URL } = CONFIG_CLIENT;
 const domain = trimHttpProtocol(SITE_URL);
 const messageLength = 20 as const;
 
@@ -33,40 +36,46 @@ const trimmedMessage = limitString(message, messageLength);
             {trimmedMessage}
           </Link>
         </div>
-        <div class="flex items-center gap-2">
-          <label class="font-bold">Design system:</label>
-          <Link href={`${ROUTES.DESIGN}`} title="Design system">link</Link>
-        </div>
+        {
+          !isProd && (
+            <div class="flex items-center gap-2">
+              <label class="font-bold">Design system:</label>
+              <Link href={`${ROUTES.DESIGN}`} title="Design system">
+                link
+              </Link>
+            </div>
+          )
+        }
       </div>
 
       <!-- right column -->
       <ul class="flex gap-2 flex-wrap xs:flex-nowrap lg:items-center">
-        <li>
+        <!-- <li>
           <Link
             href={AUTHOR_GITHUB}
             target="_blank"
             rel="me noreferrer noopener"
-            title="@nemanjam on Github"
+            title="@rzhuang on Github"
             class="flex items-center gap-2 text-base xs:text-lg"
             variant="link-nav"
           >
             <Icon name="mdi:github" class="h-6 w-6 fill-current" />
             <span>Github</span>
           </Link>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <Link
             href={AUTHOR_LINKEDIN}
             target="_blank"
             rel="me noreferrer noopener"
-            title="Nemanja on LinkedIn"
+            title="rzhuang on LinkedIn"
             class="flex items-center gap-2 text-base xs:text-lg"
             variant="link-nav"
           >
             <Icon name="mdi:linkedin" class="h-6 w-6 fill-current" />
             <span>LinkedIn</span>
           </Link>
-        </li>
+        </li> -->
         <li>
           <Link
             href={ROUTES.API.FEED_RSS}

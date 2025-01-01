@@ -11,7 +11,7 @@ export const getPages = async () => {
   const listPages = Object.fromEntries(
     Object.entries(PAGE_METADATA).map(([path, metadata]) => {
       return [
-        // 'lists/blog'
+        // 'lists/post'
         path,
         { ...defaultTitleAndDescription, ...metadata },
       ];
@@ -39,10 +39,10 @@ export const getPages = async () => {
   /*-------------------------------- collections ------------------------------*/
 
   // ! 1. must be object, not array of objects
-  // ! 2. must not start with '/' blog/slug <- correct, /blog/slug <- incorrect
+  // ! 2. must not start with '/' post/slug <- correct, /post/slug <- incorrect
   const allPosts = await getAllPosts();
   const posts = Object.fromEntries(
-    allPosts.map((post) => [`${OG_IMAGE_PREFIXES.OG_BLOG}/${post.slug}`, post.data])
+    allPosts.map((post) => [`${OG_IMAGE_PREFIXES.OG_POST}/${post.slug}`, post.data])
   );
 
   const allProjects = await getAllProjects();

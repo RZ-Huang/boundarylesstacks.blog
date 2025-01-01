@@ -13,10 +13,10 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/blog",
+  "start_url": "/post",
   "scope": "/",
-  "name": "Nemanja Mitic",
-  "short_name": "Nemanja Mitic",
-  "description": "Nemanja Mitic’s coding blog",
+  "name": "Boundarylesstacks",
+  "short_name": "Boundarylesstacks",
+  "description": "RZ Huang's blog",
   "theme_color": "#0f172a"
 }

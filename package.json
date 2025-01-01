@@ -1,5 +1,5 @@
 {
-  "name": "nemanjam.github.io",
+  "name": "boundarylesstacks.blog.github.io",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,9 +7,9 @@
     "start": "serve ./dist",
     "preview": "astro preview",
     "build": "astro build",
-    "build:nginx": "SITE_URL='https://nemanjamitic.com' PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.nemanjamitic.com/js/script.js' PLAUSIBLE_DOMAIN='nemanjamitic.com' astro build",
-    "build:nginx:local": "SITE_URL='https://blog.local.nemanjamitic.com' PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.nemanjamitic.com/js/script.js' PLAUSIBLE_DOMAIN='nemanjamitic.com' astro build",
-    "build:nginx:pi": "SITE_URL='https://blog.pi.nemanjamitic.com' PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.nemanjamitic.com/js/script.js' PLAUSIBLE_DOMAIN='nemanjamitic.com' astro build",
+    "build:nginx": "SITE_URL='https://boundarylesstacks.blog.github.io' PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js' PLAUSIBLE_DOMAIN='boundarylesstacks.blog.github.io' astro build",
+    "build:nginx:local": "SITE_URL='https://blog.local.boundarylesstacks.blog.github.io' PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js' PLAUSIBLE_DOMAIN='boundarylesstacks.blog.github.io' astro build",
+    "build:nginx:pi": "SITE_URL='https://blog.pi.boundarylesstacks.blog.github.io' PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js' PLAUSIBLE_DOMAIN='boundarylesstacks.blog.github.io' astro build",
     "astro": "astro",
     "sync": "astro sync",
     "lint": "eslint --ext .astro,.tsx,.ts,.js,.mdx src",
@@ -19,12 +19,12 @@
     "deploy:nginx": "bash scripts/deploy-nginx.sh '~/traefik-proxy/apps/nmc-nginx-with-volume/website' arm1",
     "deploy:nginx:local": "bash scripts/deploy-nginx.sh '~/traefik-proxy/apps/nmc-nginx-with-volume/website' lxc11",
     "deploy:nginx:pi": "bash scripts/deploy-nginx.sh '~/traefik-proxy/apps/nmc-nginx-with-volume/website' pi",
-    "deploy:docker": "bash scripts/deploy-docker.sh arm1 '~/traefik-proxy/apps/nmc-docker' nemanjamitic/nemanjam.github.io",
-    "deploy:docker:local": "bash scripts/deploy-docker.sh lxc11 '~/traefik-proxy/apps/nmc-docker' nemanjamitic/nemanjam.github.io",
-    "deploy:docker:pi": "bash scripts/deploy-docker.sh pi '~/traefik-proxy/apps/nmc-docker' nemanjamitic/nemanjam.github.io",
-    "docker:build:push:arm": "docker buildx build -f ./docker/Dockerfile -t nemanjamitic/nemanjam.github.io --build-arg ARG_SITE_URL_ARM64='https://nmc-docker.arm1.nemanjamitic.com' --build-arg ARG_PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.nemanjamitic.com/js/script.js' --build-arg ARG_PLAUSIBLE_DOMAIN='nemanjamitic.com' --platform linux/arm64 --progress=plain --push .",
-    "docker:build:push:x86": "docker buildx build -f ./docker/Dockerfile -t nemanjamitic/nemanjam.github.io --build-arg ARG_SITE_URL_AMD64='https://nmc-docker.local.nemanjamitic.com' --build-arg ARG_PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.nemanjamitic.com/js/script.js' --build-arg ARG_PLAUSIBLE_DOMAIN='nemanjamitic.com' --platform linux/amd64 --push --progress=plain .",
-    "docker:push": "docker push nemanjamitic/nemanjam.github.io",
+    "deploy:docker": "bash scripts/deploy-docker.sh arm1 '~/traefik-proxy/apps/nmc-docker' boundarylesstacks.blog.github.io",
+    "deploy:docker:local": "bash scripts/deploy-docker.sh lxc11 '~/traefik-proxy/apps/nmc-docker' boundarylesstacks.blog.github.io",
+    "deploy:docker:pi": "bash scripts/deploy-docker.sh pi '~/traefik-proxy/apps/nmc-docker' boundarylesstacks.blog.github.io",
+    "docker:build:push:arm": "docker buildx build -f ./docker/Dockerfile -t boundarylesstacks.blog.github.io --build-arg ARG_SITE_URL_ARM64='https://nmc-docker.arm1.boundarylesstacks.blog.github.io' --build-arg ARG_PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js' --build-arg ARG_PLAUSIBLE_DOMAIN='boundarylesstacks.blog.github.io' --platform linux/arm64 --progress=plain --push .",
+    "docker:build:push:x86": "docker buildx build -f ./docker/Dockerfile -t boundarylesstacks.blog.github.io --build-arg ARG_SITE_URL_AMD64='https://nmc-docker.local.boundarylesstacks.blog.github.io' --build-arg ARG_PLAUSIBLE_SCRIPT_URL='https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js' --build-arg ARG_PLAUSIBLE_DOMAIN='boundarylesstacks.blog.github.io' --platform linux/amd64 --push --progress=plain .",
+    "docker:push": "docker push boundarylesstacks.blog.github.io",
     "dc:up": "docker compose up --build --force-recreate -d"
   },
   "dependencies": {

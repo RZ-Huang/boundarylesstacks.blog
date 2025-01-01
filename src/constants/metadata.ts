@@ -28,31 +28,30 @@ export const DEFAULT_METADATA: Required<Metadata> = {
 export const PAGE_METADATA = {
   // list pages
   // must have 'list' prefix to omit type arg
-  'lists/blog': {
-    title: 'Blog',
-    description:
-      'Est aliquip reprehenderit eu esse duis laboris cillum adipisicing reprehenderitvoluptate ex aute voluptate.',
+  'lists/post': {
+    title: 'post',
+    description: 'Post',
   },
-  'lists/blog/tags': {
+  'lists/post/tags': {
     title: 'Tags',
   },
-  'lists/blog/tags/tag': {
+  'lists/post/tags/tag': {
     title: 'Tag',
   },
-  // 'src/pages/blog/tags/[tag]/[...page].astro' // dynamic tag param
-  'lists/blog/explore': {
+  // 'src/pages/post/tags/[tag]/[...page].astro' // dynamic tag param
+  'lists/post/explore': {
     title: 'Explore',
   },
-  'lists/blog/categories': {
+  'lists/post/categories': {
     title: 'Categories',
   },
-  'lists/blog/categories/category': {
+  'lists/post/categories/category': {
     title: 'Category',
   },
-  // src/pages/blog/categories/[category]/[...page].astro
+  // src/pages/post/categories/[category]/[...page].astro
   'lists/projects': {
     title: 'Projects',
-    description: 'Ad duis incididunt reprehenderit elit in enim amet dolor.',
+    description: 'Projects',
   },
   'lists/links': {
     title: 'Links',
@@ -62,7 +61,7 @@ export const PAGE_METADATA = {
 export type PageMetadataKey = keyof typeof PAGE_METADATA;
 
 export const OG_IMAGE_PREFIXES = {
-  OG_BLOG: 'blog',
+  OG_POST: 'post',
   OG_PROJECTS: 'projects',
   OG_PAGES: 'pages',
   OG_LISTS: 'lists',

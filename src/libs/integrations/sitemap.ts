@@ -15,7 +15,7 @@ export const sitemapIntegration = () =>
       if (item.url.endsWith(SITE_URL)) {
         item.priority = 1.0;
         // google can access it with '/'
-      } else if (item.url.endsWith(`${SITE_URL}${ROUTES.BLOG}`)) {
+      } else if (item.url.endsWith(`${SITE_URL}${ROUTES.POST}`)) {
         item.changefreq = 'daily' as ChangeFreqEnum;
         item.priority = 0.9;
       }
