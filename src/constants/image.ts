@@ -34,8 +34,8 @@ export const IMAGE_SIZES = {
       height: 120,
     },
     _404: {
-      width: TW_SCREENS.MD,
-      height: TW_SCREENS.HEIGHTS.MD,
+      width: TW_SCREENS.XS,
+      height: TW_SCREENS.HEIGHTS.XS,
     },
     MDX_XXS: { width: TW_SCREENS.XXS },
     MDX_XS: { width: TW_SCREENS.XS },
