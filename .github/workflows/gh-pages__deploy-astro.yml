@@ -22,8 +22,8 @@ permissions:
 
 # set env vars in Github settings here
 env:
-  SITE_URL: 'https://boundaryless.blog'
-  PLAUSIBLE_SCRIPT_URL: 'https://plausible.arm1.boundarylesstacks.blog.github.io/js/script.js'
+  SITE_URL: 'https://boundaryless.blog.github.io'
+  PLAUSIBLE_SCRIPT_URL: ''
   PLAUSIBLE_DOMAIN: 'boundarylesstacks.blog.github.io'
 
 jobs:
