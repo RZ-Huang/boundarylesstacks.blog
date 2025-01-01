@@ -13,17 +13,7 @@ export const COLLECTIONS = {
   PROJECT: 'project',
 } as const;
 
-export const TAGS = [
-  'next.js',
-  'react',
-  'astro',
-  'node.js',
-  'javascript',
-  'css',
-  'python',
-  'devops',
-  'self-hosting',
-] as const;
+export const TAGS = ['test'] as const;
 
 /** adjust this later */
 export const CATEGORIES = [
