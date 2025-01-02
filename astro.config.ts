@@ -43,7 +43,4 @@ export default defineConfig({
       sourcemap: false,
     },
   },
-  redirects: {
-    '/': '/post',
-  },
 });

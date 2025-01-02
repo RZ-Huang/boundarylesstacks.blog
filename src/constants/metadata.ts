@@ -26,10 +26,13 @@ export const DEFAULT_METADATA: Required<Metadata> = {
  * Reused for ogImage api route.
  */
 export const PAGE_METADATA = {
+  '/lists/home': {
+    title: 'Home',
+  },
   // list pages
   // must have 'list' prefix to omit type arg
   'lists/post': {
-    title: 'post',
+    title: 'Post',
     description: 'Post',
   },
   'lists/post/tags': {
@@ -61,6 +64,7 @@ export const PAGE_METADATA = {
 export type PageMetadataKey = keyof typeof PAGE_METADATA;
 
 export const OG_IMAGE_PREFIXES = {
+  OG_HOME: 'home',
   OG_POST: 'post',
   OG_PROJECTS: 'projects',
   OG_PAGES: 'pages',

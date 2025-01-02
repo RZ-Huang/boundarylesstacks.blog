@@ -2,10 +2,10 @@ import { ROUTES } from '@/constants/routes';
 
 /** Doesn't contain Home nav item. */
 export const NAVIGATION_ITEMS = [
-  {
-    title: 'Home',
-    path: ROUTES.POST,
-  },
+  // {
+  //   title: 'Home',
+  //   path: ROUTES.POST,
+  // },
   // {
   //   title: 'Explore',
   //   path: ROUTES.EXPLORE,

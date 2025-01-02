@@ -1,0 +1,19 @@
+---
+import { getAllPostsWithReadingTime } from '@/modules/post/common';
+import List from '@/layouts/List.astro';
+import PostList from '@/components/PostList.astro';
+import { getPageMetadata } from '@/utils/metadata';
+
+import type { Post } from '@/types/post';
+
+// TODO: Add pagination to avoid loading all posts in the beginning
+const posts: Post[] = await getAllPostsWithReadingTime();
+
+const metadata = getPageMetadata('/lists/home');
+
+const layoutProps = { metadata };
+---
+
+<List {...layoutProps}>
+  <PostList posts={posts} />
+</List>
