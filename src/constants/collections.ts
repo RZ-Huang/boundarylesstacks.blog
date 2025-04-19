@@ -13,7 +13,7 @@ export const COLLECTIONS = {
   PROJECT: 'project',
 } as const;
 
-export const TAGS = ['test'] as const;
+export const TAGS = ['test', 'javascript'] as const;
 
 /** adjust this later */
 export const CATEGORIES = [
